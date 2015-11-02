@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head><title>Adform CS Extension Settings</title></head>
+<style>
+html,body,div,span,h1,h2,h3,a,img,ul,li,fieldset,form,label,legend,table,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;float:none;}
+*:focus{outline:0;}ol,ul{list-style:none;}select{padding:0;margin:0;}option{padding:0;margin:0;}input {top:0;left:0;padding:0;margin:0;} input[type="submit"]:hover {cursor:pointer;}img,input,select,button{vertical-align:middle;}table{border-collapse:collapse;border-spacing:0;}th,td{text-align:left;vertical-align:top;}
+body{color:#333;text-align:left;font:13px/16px "Open Sans",Arial,sans-serif;background:#ffffff;}
+a:hover{cursor:pointer;text-decoration:underline;} a,a:visited {cursor:pointer;color:#333333;} a {text-decoration:none;}
+textarea{margin:0;padding:5px;}
+input[type="text"],textarea{border:1px solid #A5ACB2;color:#000000;font:12px/14px Arial,Helvetica,sans-serif;}
+.clear{clear:both !important;display:block !important;float:none !important;padding:0 !important;margin:0 !important;width:0 !important;height:0 !important;line-height:1px !important;border:0 !important;}
+#container{text-align:left;padding:50px;width:500px;}
+h1{padding-bottom:20px;font:25px/31px "Open Sans", Helvetica, Arial,sans-serif;}
+#status{display:none;}
+div.updated{border:1px solid #e6db55;background:#ffffe0;color:#000;padding:7px 5px;margin-bottom:20px;}
+
+.button{display:inline-block;outline:none;cursor:pointer;text-align:center;text-decoration:none;font:13px/18px Arial,Helvetica,sans-serif;padding:2px 15px 3px;text-shadow: 0 1px 1px rgba(0,0,0,.3);border-radius: .5em;box-shadow: 0 1px 2px rgba(0,0,0,.2);}
+.button:hover {text-decoration:none;}
+.button:active {position:relative;top:1px;}
+.button.blue{color:#ffffff;border: solid 1px #0076a3;background:#0095cd;background:-webkit-gradient(linear,left top,left bottom,from(#00adee),to(#0078a5));}
+.button.blue:hover{background:#007ead;background:-webkit-gradient(linear,left top,left bottom,from(#0095cc),to(#00678e));}
+.button.blue:active{background:-webkit-gradient(linear,left top,left bottom,from(#0078a5),to(#00adee));}
+
+.form_table{max-width:700px;}
+.form_table fieldset{border:none;border-top:1px solid #ccc;}
+.form_table legend{padding:0 15px 0 0;color:#036;background:transparent;font:bold 15px/19px Arial,​Helvetica,​sans-serif;}
+.form_table table{margin:15px 0;width:100%;}
+.form_table th, .form_table td{border:1px solid #CDCDCD;padding:4px;}
+.form_table th{vertical-align:middle;background:#e6EEEE;background:-webkit-gradient(linear,left top,left bottom,from(#e6EEEE),to(#d6dddd));}
+.form_table tbody th{width:170px;}
+.form_table td{background:#fdfdfd;background:-webkit-gradient(linear,left top,left bottom,from(#fdfdfd),to(#fbfbfb));}
+.form_table input,
+.form_table textarea{width:97%;min-width:194px;padding:2px;font:12px/16px Arial,​Helvetica,​sans-serif;border-radius:3px;border:1px solid #BBBBBB;color:#333;}
+.form_table input{height:16px;}
+.form_table textarea{height:70px;}
+.form_table select{width:200px;}
+.form_table .fixed input{min-width:0;}
+.form_table .inp_checkbox input{width:auto;min-width:0;}
+.form_table .inp_file input{height:auto;width:40%;min-width:0;}
+</style>
+<body>
+<div id="container">
+	<h1>Adform UX Extension Settings</h1>
+	<div class="form_table">
+		<div class="msg updated" id="status"></div>
+		<fieldset>
+			<legend>New Session</legend>
+			<table><tbody id="newsession">
+				<tr><th>Remove CSS</th><td><input id="opt-removecss" type="text" name="removecss" value="" /></td></tr>
+				<tr><th>Add CSS</th><td><input id="opt-addcss" type="text" name="addcss" value="" /></td></tr>
+				<tr><th>New session limit (min)</th><td><input id="opt-sessionlimit" type="text" name="sessionlimit" value="" /></td></tr>
+			</tbody></table>
+		</fieldset>
+		<a class="button blue submit" id="start" style="margin:0 0 20px 0;">Update</a>
+		<fieldset>
+			<legend>Current Session</legend>
+			<table><tbody id="cursession">
+				<tr><th>Remove CSS</th><td></td></tr>
+				<tr><th>Add CSS</th><td></td></tr>
+				<tr><th>Valid until</th><td></td></tr>
+			</tbody></table>
+		</fieldset>
+		<a class="button blue submit" id="stop">Stop</a>
+	</div>
+</div>
+<script src="options.js"></script>
+</body>
+</html>
