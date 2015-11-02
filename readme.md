@@ -1,1 +1,1 @@
-#Chrome extension for swiping css
+#Chrome extension for changing css
